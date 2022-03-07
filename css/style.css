@@ -153,7 +153,7 @@
 }
 .footer-sx{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     width: 12%;
     line-height: 70px;
     
@@ -161,8 +161,7 @@
 .footer-sx img{
     width: 45px;
     height: 45px;
-    transform: translate(-25% , 25%);
-    margin: 0 20px;
+    transform: translate(0% , 25%);
 }
 .voice-column{
     display: flex;
@@ -227,7 +226,7 @@
     margin-top: 20px;
 }
 .center-voice a{
-   margin: 0 10px;
+   margin: 0 40px;
    text-transform:uppercase;
    color: var(--color-gray);
    text-decoration: none;
@@ -249,25 +248,30 @@
     margin-top: 3%;
     margin-bottom: 3%;
 }
+.contain{
+    width: 80%;
+    margin: 0 auto;
+}
 
 .recently-played{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
+}
+.recently-played a{
+    text-decoration: none;
+    
 }
 .center h3{
     color: var(--color-gray-ligth);
-    margin-left: 10%;
     font-size: 32px;
 }
 #recently{
     margin-bottom: var(--gap-down);
+
 }
 .center-row>p{
     margin-bottom: var(--gap-down);
-    margin-left: 10%;
 }
 
 .card{
@@ -282,16 +286,18 @@
     z-index: 1;
 }
 
-.card img:hover .over-img{
-	opacity: 1;
-	box-shadow: 0 0 0 5px rgba(255,255,255,0.3) inset;
+.card:hover .over-img{
+	display: block;
 }
 .over-img{
     position: absolute;
     width: 250px;
     height: 250px;
-    opacity: 0;
+    opacity: 1;
     z-index: 500;
+    background-color: rgba(0, 0, 0, 0.507);
+    border-bottom: none;
+    display: none;
 }
 .card h4{
     color: var(--color-gray-ligth);
@@ -303,10 +309,8 @@
 }
 .created-for-john{
     display: flex;
-    width: 80%;
-    margin: 0 auto;
 }
-.created-for-john .card{
+.created-for-john a{
     margin: 0 3.5% 0 0;
 }
 .center-row p{
@@ -344,4 +348,76 @@ background-color: var(--color-gray);
         height: 3px;
         border-radius: 25%;
         background-color: var(--color-gray-ligth);
+    }
+
+    /**responsive parte */
+    
+    @media screen  and (max-width: 2165px){
+        .voice-footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+   @media screen  and (max-width: 1930px){
+        .recently-played{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .recently-played a{
+            text-decoration: none;
+            margin: 10px 3.5%;
+        }
+        #recently{
+            margin-bottom: var(--gap-down);
+            margin-left: 3.5%;
+        }
+        .footer-centrale{
+            width: 50%;
+            text-align: center;
+            line-height: 35px;
+            margin-top: 5px;
+            color: var(--color-gray-ligth);
+        }
+        
+    }
+    @media screen and (max-width: 1350px){
+        
+    }
+
+    @media screen and (max-width: 1350px){
+        .recently-played{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #recently{
+            margin-bottom: var(--gap-down);
+            text-align: center;
+            margin-left: 0;
+        }
+        .center-row h3{
+            text-align: center;
+        }
+        .center-row p{
+            color: var(--color-gray);
+            text-align: center;
+        }
+        .created-for-john{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        
+    }
+    @media screen and (max-width: 1200px) {
+        .center-voice a{
+        margin: 20px 40px;
+        text-transform:uppercase;
+        color: var(--color-gray);
+        text-decoration: none;
+     }
     }
