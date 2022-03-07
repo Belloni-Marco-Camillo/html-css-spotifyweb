@@ -12,6 +12,7 @@
     --color-gray:#99989A;
     --color-gray-ligth:#F4F0F7;
     --color-evidenced:#B8EC2F;
+    --gap-down:36px
 }
 /**inizo header */
 .header{
@@ -25,12 +26,20 @@
     
 }
 .cta-upgrade{
-    color: white;
-    border: 1px solid white;
+    color: var(--color-gray);
+    border: 1px solid var(--color-gray);
     padding: 10px 35px;
     margin-right: 25px;
     border-radius: 25px;
     text-transform:uppercase;
+}
+.cta-upgrade a{
+    text-decoration: none;
+    color: var(--color-gray);
+}
+.cta-upgrade:hover{
+    color: var(--color-gray-ligth);
+    border: 1px solid var(--color-gray-ligth);
 }
 /**fine header */
 
@@ -59,11 +68,19 @@
 }
 .icon{
    line-height: 50px;
-   margin: 0 20px 0 20px;
+   margin: 0 20px 0 0;
+
+}
+.icon:hover{
+    color: var(--color-gray-ligth);
 }
 .icon span{
     vertical-align: super;
     margin: 20px 0;
+}
+.voice-navbar:hover{
+    border-left: 3px solid var(--color-evidenced);
+    padding-left: 20px;
 }
 .voice-navbar{
     display: flex;
@@ -81,6 +98,16 @@
     margin: auto 20px auto 0;    
     padding: 0 4px;
 
+}
+.navbar-up p{
+    margin: 10px 0 10px 0 ;
+}
+.navbar-up a{
+    color: var(--color-gray);
+    text-decoration: none;
+}
+.navbar-up a:hover{
+    color: var(--color-gray-ligth);
 }
 .voice-light{
     color: var(--color-gray-ligth);
@@ -150,6 +177,9 @@
 .voice-footer{
     color: var(--color-gray);
 }
+.voice-footer *{
+    margin: 0 10px;
+}
 .footer-centrale{
     width: 76%;
     text-align: center;
@@ -191,7 +221,7 @@
 .center-voice{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .center-voice a{
    margin: 0 10px;
@@ -226,12 +256,16 @@
 .center h3{
     color: var(--color-gray-ligth);
     margin-left: 10%;
-    margin-bottom: 20px;
+    font-size: 32px;
+}
+#recently{
+    margin-bottom: var(--gap-down);
 }
 .center-row>p{
-    margin-bottom: 2%;
+    margin-bottom: var(--gap-down);
     margin-left: 10%;
 }
+
 .card{
     width: 250px;
     display: flex;
