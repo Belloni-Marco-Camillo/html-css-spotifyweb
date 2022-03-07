@@ -20,11 +20,13 @@
     background-color: var(--bg-header);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 .cta-upgrade{
     color: white;
     border: 1px solid white;
-    height: 30px;
-    margin: 25px;
-    padding: 0 15px;
+    padding: 10px 35px;
+    margin-right: 25px;
+    border-radius: 25px;
+    text-transform:uppercase;
 }
