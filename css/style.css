@@ -539,5 +539,18 @@ background-color: var(--color-gray);
         .a-hide{
             display: none;
         }
+        .center{
+            position: absolute;
+            top:70px;
+            right: 0;
+            width: calc(100% - 50px);
+            background-color: var(--bg-body);
+            height: calc(100vh - 140px);
+            overflow: auto;
+            overflow-x: hidden;
+        }
+        hr{
+            display: none;
+        }
     }
     
