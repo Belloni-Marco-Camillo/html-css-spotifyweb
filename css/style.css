@@ -50,7 +50,7 @@
     width: 12%;
     position: fixed;
     background-color: var(--bg-nav-bar);
-    height: 95vh;
+    height: calc(100% - 70px);
     z-index: 1;
     color: var(--color-gray);
 }
@@ -97,7 +97,9 @@
 #icon-plus{
     margin: auto 20px auto 0;    
     padding: 0 4px;
-
+}
+.navbar-up{
+    overflow-y: scroll;
 }
 .navbar-up p{
     margin: 10px 0 10px 0 ;
@@ -220,6 +222,7 @@
 
 .center-voice{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
@@ -249,6 +252,7 @@
 
 .recently-played{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
