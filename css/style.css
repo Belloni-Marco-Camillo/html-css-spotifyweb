@@ -78,7 +78,9 @@
     margin: 20px 0;
 }
 #icon-plus{
-    margin: auto 20px auto 0;
+    margin: auto 20px auto 0;    
+    padding: 0 4px;
+
 }
 .voice-light{
     color: var(--color-gray-ligth);
@@ -97,6 +99,10 @@
 }
 .voice-navbar-down span{
     vertical-align: text-bottom;
+}
+#user{
+    background-color: var(--color-gray);
+    border-radius: 100%;
 }
 .navbar{
     display: flex;
@@ -170,6 +176,9 @@
     justify-content: space-around;
 }
 .footer-dx{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 12%;
     text-align: center;
     line-height: 70px;
@@ -200,7 +209,7 @@
     right: 0;
     width: 88%;
     background-color: var(--bg-body);
-    height: 100%;
+    height: calc(100vh - 140px);
     overflow: auto;
 }
 .center-row{
@@ -230,7 +239,21 @@
     align-items: center;
 }
 .card img{
+    position: relative;
     width: 100%;
+    z-index: 1;
+}
+
+.card img:hover .over-img{
+	opacity: 1;
+	box-shadow: 0 0 0 5px rgba(255,255,255,0.3) inset;
+}
+.over-img{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+    z-index: 500;
 }
 .card h4{
     color: var(--color-gray-ligth);
@@ -251,3 +274,36 @@
 .center-row p{
     color: var(--color-gray);
 }
+.music{
+position: relative;
+top: 20px;
+width: 70%;
+border-radius: 15%;
+height: 2px;
+background-color: var(--color-gray);
+}
+.music-percent{
+    position: absolute;
+    left: -3%;
+    top: 0.8px;
+    width: 30%;
+    height: 7px;
+    border-radius: 25%;
+    background-color: var(--color-gray-ligth);
+}
+.volume{
+    position: relative;
+    width: 70px;
+    border-radius: 15%;
+    height: 2px;
+    background-color: var(--color-gray);
+    }
+    .stato-volume{
+        position: absolute;
+        left: -3%;
+        top: 0px;
+        width: 45%;
+        height: 3px;
+        border-radius: 25%;
+        background-color: var(--color-gray-ligth);
+    }

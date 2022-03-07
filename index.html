@@ -46,7 +46,7 @@
                 </div>
                 <hr>
                 <div class="voice-navbar-down">
-                    <img src="./img/profile.svg" alt="user"><span class="user">John Doe</span>
+                    <img id="user" src="./img/profile.svg" alt="user"><span class="user">John Doe</span>
                 </div>  
             </div>
         </section>
@@ -65,6 +65,7 @@
                 <div class="recently-played">
                     <div class="card">
                         <img src="./img/metal_lifting.jpg" alt="metal">
+                        <div class="over-img"></div>
                         <h4>Heavy metal</h4>
                         <p>Subtitle</p>
                     </div>
@@ -161,7 +162,9 @@
                 </div>
                 <div id="second-row" class="voice-row">
                     <span>0.25</span>
-                    
+                    <div class="music">
+                        <div class="music-percent"></div>
+                    </div>
                     <span>4.35</span>
                 </div>
             </div>
@@ -169,7 +172,10 @@
         <div class="footer-dx">
             <i class="fa-solid fa-table-list"></i>
             <i class="fa-regular fa-tv"></i>
-            <i class="fa-regular fa-volume-off"></i>
+            <i class="fa-solid fa-volume-high"></i>
+            <div class="volume">
+                <div class="stato-volume"></div>
+            </div>
         </div>
     </footer>
 </body>
