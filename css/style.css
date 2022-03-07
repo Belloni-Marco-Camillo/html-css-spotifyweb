@@ -3,3 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --bg-header:#0D0F16;
+    --bg-body: #141824;
+    --bg-nav-bar:#010001;
+    --bg-footer:#282729;
+    --color-gray:#99989A;
+    --color-gray-ligth:#F4F0F7;
+    --color-evidenced:#B8EC2F;
+}
+
+.header{
+    height: 70px;
+    width: 100%;
+    background-color: var(--bg-header);
+    display: flex;
+    justify-content: flex-end;
+}
+.cta-upgrade{
+    color: white;
+    border: 1px solid white;
+    height: 30px;
+    margin: 25px;
+    padding: 0 15px;
+}
