@@ -13,7 +13,7 @@
     --color-gray-ligth:#F4F0F7;
     --color-evidenced:#B8EC2F;
 }
-
+/**inizo header */
 .header{
     position: absolute;
     height: 70px;
@@ -31,4 +31,110 @@
     margin-right: 25px;
     border-radius: 25px;
     text-transform:uppercase;
+}
+/**fine header */
+
+
+
+/**inizo navbar */
+.navbar{
+    width: 12%;
+    position: absolute;
+    background-color: var(--bg-nav-bar);
+    height: calc(100vh - 70px);
+    z-index: 1;
+    color: var(--color-gray);
+}
+.navbar *{
+    margin: 20px 8%;
+}
+.navbar img{
+    width: 150px;
+    height: auto;
+    margin: 0px 8%;
+}
+.navbar i{
+    background-color: var(--color-gray);
+    color: var(--bg-nav-bar);
+}
+.icon{
+   line-height: 50px;
+   margin: 0 20px 0 20px;
+}
+.icon span{
+    vertical-align: super;
+    margin: 20px 0;
+}
+.voice-navbar{
+    display: flex;
+    margin: 0 20px 0 20px;
+}
+.voice-navbar img{
+    margin: 10px 17px 10px 0px;
+    width: 25px;
+    height: auto;
+}
+.voice-navbar h3{
+    margin: 20px 0;
+}
+#icon-plus{
+    margin: auto 20px auto 0;
+}
+.voice-light{
+    color: var(--color-gray-ligth);
+}
+.navbar h4{
+    color: var(--color-gray-ligth);
+}
+.navbar-down img{
+    width: 25px;
+    height: auto;
+    margin-left: 0px;
+}
+.voice-navbar-down{
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+.voice-navbar-down span{
+    vertical-align: text-bottom;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/**fine navbar */
+
+/**inizio footer */
+#footer-site{
+    height: 70px;
+    width: 100%;
+    background-color: var(--bg-footer);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+.footer-sx{
+    display: flex;
+    justify-content: flex-start;
+    width: 12%;
+    line-height: 70px;
+}
+.footer-sx img{
+    width: 45px;
+    height: 45px;
+    transform: translate(-25% , 25%);
+    margin: 0 20px;
+}
+.voice-column{
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    color: var(--color-gray);
+    margin: 0 40px 0 20px;
+}
+.voice-column h4{
+    margin-top: 8px;
+    margin-bottom:-14px;
+    color: var(--color-gray-ligth);
 }
