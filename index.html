@@ -17,39 +17,47 @@
         
         <section class="navbar">
             <div class="navbar-up">
-                <img src="./img/logo.svg" alt="logo">
+                <div class="logo"></div>
                 <div class="voice-navbar">
-                    <img src="./img/home.svg" alt="home">
-                    <a href="#" class="voice-light">home</a>
+                    <div class="home"></div>
+                    <div class="a-hide"><a href="#" class="voice-light">home</a></div>
+                    
                 </div>
                 <div class="voice-navbar">
-                    <img src="./img/search.svg" alt="cerca">
-                    <a href="#" >cerca</a>
+                    <div class="search"></div>
+                    <div class="a-hide"><a href="#" >cerca</a></div>
+                    
                 </div>
                 <div class="voice-navbar">
-                    <img src="./img/libreria.svg" alt="libreria">
-                    <a href="#" >library</a>
+                    <div class="libreria"></div>
+                    <div class="a-hide"><a href="#" >library</a></div>
+                    
                 </div>
-                <h4>playlist</h4>
-                <div class="icon"><a href="#"><i id="icon-plus" class="fa-solid fa-plus fa-2x"></i><span>crea playlist</span></a></div>
-                <p><a href="#">nuova playlist</a></p>
-                <p><a href="#">nuova playlist</a></p>
-                <p><a href="#">nuova playlist</a></p>
-                <p><a href="#">nuova playlist</a></p>
-                <p><a href="#">nuova playlist</a></p>
-                <p><a href="#">nuova playlist</a></p>
-                <p><a href="#">nuova playlist</a></p>
+                <div class="playlist">
+                    <h4>playlist</h4>
+                    <div class="icon"><a href="#"><i id="icon-plus" class="fa-solid fa-plus fa-2x"></i><span>crea playlist</span></a></div>
+                    <p><a href="#">nuova playlist</a></p>
+                    <p><a href="#">nuova playlist</a></p>
+                    <p><a href="#">nuova playlist</a></p>
+                    <p><a href="#">nuova playlist</a></p>
+                    <p><a href="#">nuova playlist</a></p>
+                    <p><a href="#">nuova playlist</a></p>
+                    <p><a href="#">nuova playlist</a></p>
+                </div>
             </div>
             <div class="navbar-down">
-                <div class="voice-navbar-down">
-                    <img src="./img/download.svg" alt="dw"><span>installa app</span>
-                </div>
+                <div class="voice-navbar-down user"></div>
+                <p>installa app.</p>
                 <hr>
-                <div class="voice-navbar-down">
-                    <img id="user" src="./img/profile.svg" alt="user"><span class="user">John Doe</span>
-                </div>  
+                <div class="voice-navbar-down profile"></div>
+                <p>john doe</p>
             </div>
         </section>
+
+
+
+
+
 
         <section class="center">
             <div class="center-voice">
@@ -211,15 +219,13 @@
                 </div>
                 <div id="second-row" class="voice-row">
                     <span>0.25</span>
-                    <div class="music">
-                        <div class="music-percent"></div>
-                    </div>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                     <span>4.35</span>
                 </div>
             </div>
         </div>
         <div class="footer-dx">
-            <i class="fa-solid fa-table-list"></i>
+            <i class="fa-solid fa-list"></i>
             <i class="fa-solid fa-tv"></i>
             <i class="fa-solid fa-volume-high"></i>
             <div class="volume">
