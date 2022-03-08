@@ -81,12 +81,11 @@ body{
     vertical-align: super;
     margin: 20px 0;
 }
-.voice-navbar:hover{
-    border-left: 3px solid var(--color-evidenced);
-}
+
 .voice-navbar{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .voice-navbar img{
     margin: 10px 17px 10px 0px;
@@ -162,19 +161,36 @@ element::-webkit-scrollbar {
     height: 35px;
     width: 35px;
     margin-bottom: 0px;
-    float: left;
+    display: flex;
 }
-.user{
+.navbar-down-left{
+    display: flex;
+    align-items: center;
+    margin: 0 auto
+}
+hr{
+    margin: 0;
+}
+.download{
+    min-height: 25px;
+    min-width: 25px;
+    background-repeat: no-repeat;
     background-image: url(./../img/download.svg);
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 .profile{
-    background-image: url(./../img/profile.svg);
+    min-height: 25px;
+    min-width: 25px;
     background-repeat: no-repeat;
+    background-image: url(./../img/profile.svg);
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 .voice-navbar-down span{
     vertical-align: text-bottom;
 }
-#user{
+#users{
     background-color: var(--color-gray);
     border-radius: 100%;
 }
@@ -293,10 +309,33 @@ element::-webkit-scrollbar {
    color: var(--color-gray);
    text-decoration: none;
 }
-.center-voice a:hover{
-    color: var(--color-gray-ligth);
-    border-bottom: 3px solid var(--color-evidenced);
+.in-evidence{
+    position: relative;
 }
+.in-evidence-left{
+    position: relative;
+    margin: auto 0;
+}
+.evidence-left{
+    position: absolute;
+    height: 40px;
+    margin-left: -5px;
+    width: 2px;
+    border-radius: 10px;
+    background-color: var(--color-evidenced);
+}
+.evidence{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50% , 0);
+    margin: 0 auto;
+    height: 2px;
+    width: 30%;
+    border-radius: 10%;
+    background-color: var(--color-evidenced);
+}
+
 .center{
     position: absolute;
     top:70px;
@@ -404,8 +443,13 @@ background-color: var(--color-gray);
 }
 .volume{
     position: relative;
-    width: 70px;
+    width: 70%;
     border-radius: 15%;
+    height: 2px;
+    background-color: var(--color-gray);
+    position: relative;
+    width: 70px;
+    border-radius: 10px;
     height: 2px;
     background-color: var(--color-gray);
     }
@@ -617,8 +661,17 @@ background-color: var(--color-gray);
             overflow: auto;
             overflow-x: hidden;
         }
-        hr{
-            display: none;
+        .navbar-down{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #dw{
+            padding-right: 8px;
+            padding-bottom: 5px;
+        }
+        #users{
+            margin-top: 10px;
         }
     }
     @media screen and (max-height: 930px){
