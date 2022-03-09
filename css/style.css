@@ -890,16 +890,7 @@ background-color: var(--color-gray);
             top: 0;
         }
     }
-        
-    
-    @media screen and (max-height: 930px) and (max-width: 380px){
-        .card{
-            width: calc(100% - 20px);
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    @media screen and (max-height: 930px){
         .header{
             display: none;
         }
@@ -913,11 +904,8 @@ background-color: var(--color-gray);
             overflow: auto;
             overflow-x: hidden;
         }
-        .recently-played{
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: hidden;
-        }
     }
+    
+    
     
     
