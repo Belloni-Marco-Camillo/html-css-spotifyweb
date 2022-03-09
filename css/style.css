@@ -26,7 +26,6 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
 }
 .cta-upgrade{
     color: var(--color-gray);
@@ -81,7 +80,6 @@ body{
     vertical-align: super;
     margin: 20px 0;
 }
-
 .voice-navbar{
     display: flex;
     flex-wrap: wrap;
@@ -316,6 +314,15 @@ hr{
     position: relative;
     margin: auto 0;
 }
+#creato-per{
+    margin-bottom: 10px;
+}
+.radius img{
+    border-radius: 100%;
+}
+.radius .hover-img{
+    border-radius: 100%;
+}
 .evidence-left{
     position: absolute;
     height: 40px;
@@ -373,7 +380,7 @@ hr{
     color: var(--color-gray-ligth);
     font-size: 32px;
 }
-#recently{
+.recently{
     margin-bottom: var(--gap-down);
 
 }
@@ -652,6 +659,9 @@ background-color: var(--color-gray);
      .in-evidence{
          top:20px;
      }
+     .recently{
+        margin-bottom: 20px;
+    }
     }
 
     @media screen and (max-width: 920px){
@@ -709,6 +719,9 @@ background-color: var(--color-gray);
         #users{
             margin-top: 10px;
         }
+        .recently{
+            margin-bottom: 20px;
+        }
     }
     @media screen and (max-width:588px){
         .card{
@@ -718,7 +731,7 @@ background-color: var(--color-gray);
             flex-direction: column;
             align-items: center;
         }
-        #recently{
+        .recently{
             text-align: center;
             margin-bottom: var(--gap-down);
         }
