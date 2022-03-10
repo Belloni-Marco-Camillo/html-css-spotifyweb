@@ -414,16 +414,12 @@ hr{
 .between-card{
     margin-right: 200%;
 }
-
 .recently-played{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
 
-}
-.pop-artist{
-    display: flex;
-    
-}
 .recently-played a{
     text-decoration: none;
     
@@ -441,7 +437,7 @@ hr{
 }
 
 .card{
-    width: calc((100% / 6) - 20px);
+    min-width: 180px;
     margin-right: 20px;
     display: flex;
     flex-direction: column;
@@ -633,7 +629,7 @@ background-color: var(--color-gray);
 
     @media screen and (max-width: 992px){
         .recently-played .card{
-                width: calc((100% / 4) - 20px);
+                width: calc((100% / 6) - 20px);
                 margin-right: 20px;
                 display: flex;
                 flex-direction: column;
@@ -642,7 +638,7 @@ background-color: var(--color-gray);
     /**larghezza s 790px */
     @media screen and (max-width: 790px){
         .recently-played .card{
-                width: calc((100% / 2) - 20px);
+                width: calc((100% / 6) - 20px);
                 margin-right: 20px;
                 display: flex;
                 flex-direction: column;
@@ -682,9 +678,13 @@ background-color: var(--color-gray);
             padding-bottom: 75px;
         }
         
+        
     }
     /**larghezza xxs 375px */
     @media screen and (max-width: 375px){
+        .recently-played{
+            flex-wrap: wrap;
+        }
         .recently-played .card{
             width: calc((100% / 1) - 20px);
             margin-right: 20px;
