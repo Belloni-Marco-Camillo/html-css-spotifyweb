@@ -51,7 +51,7 @@ p, span, a{
 
 /**inizo navbar */
 .navbar{
-    width: 12%;
+    width: 150px;
     position: fixed;
     background-color: var(--bg-nav-bar);
     height: calc(100% - 70px);
@@ -59,8 +59,9 @@ p, span, a{
     color: var(--color-gray);
 }
 .navbar *{
-    margin: 20px 8%;
+    margin: 8px 5%;
 }
+.navbar-up
 .navbar img{
     width: 70%;
     height: auto;
@@ -72,7 +73,7 @@ p, span, a{
 }
 .icon{
    line-height: 50px;
-   margin: 0 20px 0 0;
+   margin: 0;
 }
 .icon:hover{
     color: var(--color-gray-ligth);
@@ -95,11 +96,17 @@ p, span, a{
     margin: 20px 0;
 }
 #icon-plus{
-    margin: auto 20px auto 0;    
+    margin: auto 5px auto 0;    
     padding: 0 4px;
 }
 .navbar-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     scrollbar-width: none;
+}
+.search, .libreria{
+    margin: 0;
 }
 element::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
@@ -122,6 +129,9 @@ element::-webkit-scrollbar {
 }
 .navbar h4{
     color: var(--color-gray-ligth);
+}
+.navbar hr{
+    margin: 5px 0;
 }
 .navbar .logo{
     height: 35px;
@@ -154,6 +164,14 @@ element::-webkit-scrollbar {
     width: 25px;
     height: auto;
     margin-left: 0px;
+}
+.logo-small{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background-image: url(./../img/logo-small.svg);
+    display: none;
+    
 }
 .voice-navbar-down{
     height: 35px;
@@ -191,8 +209,7 @@ hr{
     min-width: 25px;
     background-repeat: no-repeat;
     background-image: url(./../img/profile.svg);
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0 0 0 7px;
 }
 .voice-navbar-down span{
     vertical-align: text-bottom;
@@ -208,6 +225,13 @@ hr{
 }
 .nuova-playlist{
     overflow-y: scroll;
+}
+.nuova-playlist a{
+    color: var(--color-gray);
+    text-decoration: none;
+}
+.nuova-playlist a:hover {
+    color: var(--color-gray-ligth);
 }
 /**fine navbar */
 
@@ -227,7 +251,7 @@ hr{
     border-radius: 10px;
     top: 20px;
     height: 1px;
-    width: 60%;
+    width: 50%;
     background-color: var(--color-gray);
 }
 .stato-musica{
@@ -242,7 +266,7 @@ hr{
 .footer-sx{
     display: flex;
     justify-content: space-around;
-    width: 12%;
+    width: 25%;
     line-height: 70px;
     
 }
@@ -270,14 +294,14 @@ hr{
     margin: 0 10px;
 }
 .footer-centrale{
-    width: 76%;
+    width: 50%;
     text-align: center;
     line-height: 35px;
     margin-top: 5px;
     color: var(--color-gray-ligth);
 }
 .footer-centrale *{
-    margin: -3px 30px 0px 30px;
+    margin: -3px 10px 0px 10px;
     padding-top: 5px;
 }
 #play{
@@ -298,7 +322,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 12%;
+    width: 25%;
     text-align: center;
     line-height: 70px;
     color: var(--color-gray);
@@ -321,7 +345,9 @@ hr{
 }
 .in-evidence{
     position: relative;
+    margin-bottom: 20px;
 }
+
 .in-evidence-left{
     position: relative;
     margin: auto 0;
@@ -348,18 +374,21 @@ hr{
     top: 25px;
     left: 50%;
     transform: translate(-50% , 0);
-    margin: 0 auto;
+    margin: 0 0 20px 0;
     height: 2px;
     width: 30%;
     border-radius: 10%;
     background-color: var(--color-evidenced);
+}
+.center-voice a{
+    margin-bottom: 20px;
 }
 
 .center{
     position: absolute;
     top:70px;
     right: 0;
-    width: 88%;
+    width: calc(100% - 150px);
     background-color: var(--bg-body);
     height: calc(100vh - 140px);
     overflow: auto;
@@ -370,8 +399,11 @@ hr{
     margin-bottom: 3%;
 }
 .contain{
-    width: 80%;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 0 0 20px;
+}
+.contain p{
+    margin-bottom: 20px;
 }
 .container{
     margin-left: 0%;
@@ -382,8 +414,8 @@ hr{
 
 .recently-played{
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
+    flex-wrap: wrap;
+
 }
 .pop-artist{
     display: flex;
@@ -410,19 +442,8 @@ hr{
     margin-right: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
-.pop-artist>.card{
-    min-width: calc((100% / 6) - 20px);
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-}
-.created-for>.card{
-    width: 150px;
-}
+
 .card img{
     position: relative;
     width: 100%;
@@ -431,7 +452,7 @@ hr{
 }
 .hover-card{
     position: relative;
-    width: 150px;
+    width: 100%;
 }
 .card:hover .hover-img{
 	display: block;
@@ -462,16 +483,13 @@ hr{
     color: var(--color-gray-ligth);
     margin-bottom: 5px;
     margin-top: 5px;
+    text-align: center;
 }
 .card p{
     color: var(--color-gray);
+    text-align: center;
 }
-.created-for-john{
-    display: flex;
-}
-.created-for-john a{
-    margin: 0 3.5% 0 0;
-}
+
 .center-row p{
     color: var(--color-gray);
 }
@@ -597,344 +615,88 @@ background-color: var(--color-gray);
         height: 200px;
         left: -10px;
         width: 120%;
+        border-radius: 40px;
         background-color: #1418248f;
     }
 
 
      /**alternative part */
 
-    /**responsive parte */
-    
-    @media screen  and (max-width: 2165px){
-        .voice-footer{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
-    @media screen and (max-width: 1953px) {
-        #icon-plus{
-            margin: auto 10px auto 0;
 
-        }
-        
-    }
 
-   @media screen  and (max-width: 1930px){
-        
-        .recently-played a{
-            text-decoration: none;
-        }
-        #recently{
-            margin-bottom: var(--gap-down);
-        }
-        .container{
-            margin-left: 3%;
-        }
-        .card{
-            width: calc((100% / 6) - 20px);
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .footer-centrale{
-            width: 50%;
-            text-align: center;
-            line-height: 35px;
-            margin-top: 5px;
-            color: var(--color-gray-ligth);
+
+
+    /**larghezza md 768px */
+
+    @media screen and (max-width: 992px){
+        .recently-played .card{
+                width: calc((100% / 4) - 20px);
+                margin-right: 20px;
+                display: flex;
+                flex-direction: column;
         }
     }
-    @media screen and (max-width: 1825px){
-        #icon-plus{
-            margin: auto 3px auto 0;    
-            padding: 0 4px;
+    /**larghezza s 790px */
+    @media screen and (max-width: 790px){
+        .recently-played .card{
+                width: calc((100% / 2) - 20px);
+                margin-right: 20px;
+                display: flex;
+                flex-direction: column;
         }
     }
-    @media screen and (max-width: 1620px) {
-        .card{
-            width: calc((100% / 5) - 10px);
-            margin-right: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .icon{
+    /**larghezza xs 576px */
+    @media screen and (max-width: 576px){
+        .hide{
             display: none;
-         }
-    }
-
-    @media screen and (max-width: 1350px){
-        .navbar .home{
-            min-height: 35px;
-            min-width: 35px;
-            background-repeat: no-repeat;
-            background-image: url(./../img/home.svg);
-            float: left;
-            margin: 20px 0;
         }
-        .card{
-            width: calc((100% / 5) - 20px);
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .navbar .search{
-            min-height: 35px;
-            min-width: 35px;
-            background-repeat: no-repeat;
-            background-image: url(./../img/search.svg);
-            float: left;
-            margin: 20px 0;
-        }
-        .navbar .libreria{
-            min-height: 35px;
-            min-width: 35px;
-            background-repeat: no-repeat;
-            background-image: url(./../img/libreria.svg);
-            float: left;
-            margin: 20px 0;
-        }
-        .a-hide{
-            margin: 20px 0;
-        }
-        .center-row p{
-            color: var(--color-gray);
-
-        }
-        .footer-sx img{
-            width: 30px;
+        .logo-small{
             height: 30px;
-            transform: translate(0% , 25%);
-            margin-top: 10px;
-        }
-        .voice-column{
-            display: flex;
-            flex-direction: column;
-            line-height: 35px;
-            color: var(--color-gray);
-        }
-        
-        #second-row{
-            justify-content: space-between;
-            margin-top: -10px;
-        }
-        .stato-musica{
-            position: absolute;
-            top: 3px;
-            left: -10px;
-            height: 1px;
-            width: 20%;
-            border-radius: 10px;
-            background-color: var(--color-gray-ligth);
-        }
-        .footer-sx{
-            display: flex;
-            justify-content: space-around;
-            width: 25%;
-            line-height: 70px;
-            
-        }
-        .footer-dx{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 25%;
-            text-align: center;
-            line-height: 70px;
-            color: var(--color-gray);
-        }
-        .footer-centrale *{
-            margin: -3px 10px 0px 10px;
-            padding-top: 5px;
-        }
-        .footer-centrale{
-            width: 50%;
-            text-align: center;
-            line-height: 35px;
-            margin-top: 5px;
-            color: var(--color-gray-ligth);
-        }
-        .footer-dx{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 25%;
-            text-align: center;
-            line-height: 70px;
-            color: var(--color-gray);
-        }
-        .footer-dx *{
-            margin: 0 1px;
-        }
-    }
-    
-    @media screen and (max-width: 1200px) {
-        .card{
-            width: calc((100% / 3) - 20px);
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .center-voice a{
-        margin: 20px 40px;
-        text-transform:uppercase;
-        color: var(--color-gray);
-        text-decoration: none;
-     }
-     .in-evidence{
-         top:20px;
-     }
-     .recently{
-        margin-bottom: 20px;
-    }
-    .playlist{
-        font-size: 12px;
-    }
-    }
-
-    @media screen and (max-width: 920px){
-        .card{
-            width: calc((100% / 2) - 20px);
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 30px;
+            margin-left: 12px;
+            background-image: url(./../img/logo-small.svg);
+            display: block;
         }
         .navbar{
             width: 50px;
-            position: fixed;
-            background-color: var(--bg-nav-bar);
-            height: calc(100% - 70px);
-            z-index: 1;
-            color: var(--color-gray);
         }
-        .navbar .logo{
-            background-image: url(./../img/logo-small.svg);
-        }
-        .navbar p{
-            display: none;
-        }
-    
-        .voice-navbar{
-            display: flex;
-            margin: 0;
-        }
-        .playlist{
-            display: none;
-        }
-        .a-hide{
-            display: none;
+        .download{
+            margin-left: 5px;
         }
         .center{
-            position: absolute;
-            top:70px;
-            right: 0;
-            width: calc(100% - 50px);
-            background-color: var(--bg-body);
-            height: calc(100vh - 140px);
-            overflow: auto;
-            overflow-x: hidden;
+        width: calc(100% - 50px);
+        height: calc(100vh - 70px);
+        padding-bottom: 70px;
         }
-        .navbar-down{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        #dw{
-            padding-right: 8px;
-            padding-bottom: 5px;
-        }
-        #users{
-            margin-top: 10px;
-        }
-        .recently{
-            margin-bottom: 20px;
-        }
-    }
-    @media screen and (max-width:588px){
-        .card{
-            width: calc((100% / 2) - 20px);
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-    }
-    @media screen and (max-width: 440px){
-        .card{
-            width: calc(100% - 20px);
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .recently-played {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-    }
-    
-    @media screen and (max-width:437px){
         #footer-site{
             display: none;
         }
         .footer{
             visibility: visible;
         }
-        .center{
-            position: absolute;
-            top:70px;
-            right: 0;
-            width: calc(100% - 50px);
-            background-color: var(--bg-body);
-            height: calc(100vh - 70px);
-            overflow: auto;
-            overflow-x: hidden;
-            padding-bottom: 70px;
-        }
         .navbar{
-            width: 50px;
-            position: fixed;
-            background-color: var(--bg-nav-bar);
             height: 100%;
-            z-index: 1;
-            color: var(--color-gray);
-            padding-bottom: 70px;
-        }
-        .card{
-            width: 150px;
-            display: flex;
-            flex-direction: column;
+            padding-bottom: 75px;
         }
         
     }
-    @media screen and (max-width:384px){
-        .in-evidence{
-            top: 0;
-        }
-    }
-    @media screen and (max-height: 700px){
-        .header{
-            display: none;
-        }
-        .center{
-            position: absolute;
-            top:0;
-            right: 0;
-            width: calc(100% - 50px);
-            background-color: var(--bg-body);
-            height: 100vh;
-            overflow: auto;
-            overflow-x: hidden;
+    /**larghezza xxs 375px */
+    @media screen and (max-width: 375px){
+        .recently-played .card{
+            width: calc((100% / 1) - 20px);
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
         }
     }
     
-    
-    
-    
+/**altezza massimo 550px */
+@media screen and (max-height: 550px){
+    .header{
+        display: none;
+    }
+    .center{
+        top: 0;
+        height: 100vh;
+    }
+}
