@@ -100,7 +100,6 @@ p, span, a{
 }
 .navbar-up{
     scrollbar-width: none;
-    overflow-y: scroll;
 }
 element::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
@@ -206,6 +205,9 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.nuova-playlist{
+    overflow-y: scroll;
 }
 /**fine navbar */
 
