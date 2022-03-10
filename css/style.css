@@ -257,7 +257,7 @@ hr{
 .stato-musica{
     position: absolute;
     top: 3px;
-    left: -30px;
+    left: -10px;
     height: 1px;
     width: 20%;
     border-radius: 10px;
@@ -289,6 +289,9 @@ hr{
 }
 .voice-footer{
     color: var(--color-gray);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .voice-footer *{
     margin: 0 10px;
@@ -698,5 +701,117 @@ background-color: var(--color-gray);
     .center{
         top: 0;
         height: 100vh;
+        padding-bottom: 70px;
     }
 }
+
+/**animazioni */
+.animated-cta {
+    -webkit-animation-duration: 10s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes bounce {
+    0%, 10%, 30%, 40%, 60%, 70%, 90%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    20%, 50%, 80% {
+      -webkit-transform: translateY(-5px);
+    }
+  }
+  @keyframes bounce {
+    0%, 10%, 30%, 40%, 60%, 70%, 90%, 100% {
+      transform: translateY(0);
+    }
+    20%, 50%, 80% {
+      transform: translateY(-5px);
+    }
+  }
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+  }
+  
+  /*
+  .animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
+  
+  
+  
+   
+  
+  @-webkit-keyframes tada {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    10%, 20% {
+      -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    30%, 50%, 70%, 90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    40%, 60%, 80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes tada {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      -ms-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    10%, 20% {
+      -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    30%, 50%, 70%, 90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    40%, 60%, 80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      -ms-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+  }
